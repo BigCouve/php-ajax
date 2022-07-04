@@ -1,5 +1,5 @@
 <?php 
-    include_once("./connection.php");
+    include_once("connection.php");
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +17,11 @@
     <title>Tarefa Agillis</title>
 </head>
 <body>
+    <form id="formTeste" action="">
+        <input type="text">
+        <input type="text">
+        <button type="buttonm">Envia</button>
+    </form>
     <div class="acoes">
         <button id="cadCusto" src="#" data-target="#modalForm" data-toggle="modal">Cadastrar Custo</button>
     </div>
@@ -40,10 +45,11 @@
                     <input type="text" name="nome" id="cadNome">
                     <label for="cadDescricao">Descrição</label>
                     <input type="password" name="descricao" id="cadDescricao">
-                </form>
+                
             </div>
             <div class="modal-footer">
-                <button name="fimCadastro" id="fimCadastro" type="submit" class="btn btn-primary" data-dismiss="">Cadastrar</button>
+                <button name="fimCadastro" id="fimCadastro" type="button" class="btn btn-primary" data-dismiss="">Cadastrar</button>
+                </form>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
             </div>
             </div>
