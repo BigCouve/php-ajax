@@ -1,0 +1,58 @@
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+html body{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center
+}
+
+
+
+.acoes button{
+    width: 200px;
+    height: 30px;
+    background-color: gainsboro;
+    border-radius: 3px;
+    border: 0.05rem solid black;
+}
+
+.tabelaDeCustos table{
+    border: 2px solid rgb(78, 78, 78);
+    min-width: 70vw;
+    text-align: center;
+}
+
+.tabelaDeCustos table thead tr td{
+    border: 1px solid rgb(179, 179, 179);
+}
+
+.tabelaDeCustos table tbody tr td{
+    border: 1px solid rgb(179, 179, 179);
+}
+
+.modal-title{
+    margin-left: calc(50% - 83px);
+}
+
+.modal-header .close {
+    margin-left: 0px;
+}
+
+.modal-body form label, input{
+    text-align: center;
+    margin: 0 auto;
+    display: block ;
+}
+
+#modalForm {
+    margin: 73px;
+}
