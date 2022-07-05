@@ -50,9 +50,17 @@ html body{
 .modal-body form label, input{
     text-align: center;
     margin: 0 auto;
-    display: block ;
+    display: block;
+}
+
+#cadDescricao {
+    resize: none !important;
+    margin: 0 auto !important;
+    display: block;
+    width: 80%;
+    height: auto;
 }
 
 #modalForm {
-    margin: 73px;
+    margin-top: 90px;
 }
