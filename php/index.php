@@ -62,12 +62,30 @@
                 </tr>
             </thead>
             <tbody>
+                <?php
+                //$response = $_POST['dd'];
+                //foreach ($response as $valor) { ?>
+
                 <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
+
+                    <?php 
+                    include_once("connection.php");
+                    $query = $pdo->prepare('SELECT * FROM centrodecustos');
+                    $query->execute();
+                    $count = $query->rowCount();
+
+                    for($i = 0; $i < $count; $i++){ 
+                        ?>
+                        <tr>
+                            <td class="rId"></td>
+                            <td class="rNome"></td>
+                            <td class="rDesc"></td>
+                            <td class="rAt"></td>
+                        </tr>
+                    <?php } ?>
+                    
                 </tr>
+                <?php //} ?>
             </tbody>
         </table>
     </div>
