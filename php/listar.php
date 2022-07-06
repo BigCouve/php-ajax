@@ -15,7 +15,7 @@
         $linha->CCU_NUM_CODIGO, 
         $linha->CCU_TXT_NOME,
         $linha->CCU_TXT_DESCRICAO,
-        $linha->CCU_FL_ATIVO,
+        $linha->CCU_FL_ATIVO = "Sim",
         );
     };
 

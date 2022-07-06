@@ -7,8 +7,6 @@ $(function(){
                 $(this).text(response[i]);
                 i++;
             });
-            $(".rAt").text("Sim");
-
         }, 'json'
     );
     $("#btEnv").click(function() {
@@ -25,19 +23,25 @@ $(function(){
             url: "../php/inserir.php",
             data: {"d1": nome, "d2": descricao},
             dataType: 'html',
-            success: function(){
-
-                //listagem da tabela de custos após o cadastro de um novo custo
-                $.post("../php/listar.php",
+            success: function(response){
+                if (response) {
+                    //listagem da tabela de custos após o cadastro de um novo custo
+                    $.post("../php/listar.php",
                     function (response) {
                         i = 0;
-                        $("tbody tr td").each(function() {
-                            $(this).text(response[i]);
-                            i++;
-                        })
-                        $(".rAt").text("Sim");
-                    }, 'json'
-                );
+                        $( "tbody" ).append( "<tr><td></td><td></td><td></td><td></td></td></tr>" );
+
+                            $("tbody tr td").each(function() {
+                                $(this).text(response[i]);
+                                i++;
+                            })
+                        }, 'json'
+                    );
+                }
+                else{
+                    console.log("Favor preencher todos os campos.")
+                }
+                
             },
         })          
     })

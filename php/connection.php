@@ -1,3 +1,3 @@
 <?php 
 
-$pdo = new PDO ('mysql:host=localhost; dbname=tarefaagillis;', 'root', '');
+$pdo = new PDO ('mysql:host=localhost; dbname=test;', 'root', '');
